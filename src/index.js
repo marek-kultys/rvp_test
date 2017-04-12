@@ -9,6 +9,8 @@ var Result = require('./result.jsx');
 var constants = require('./constants.js');
 var targetSequenceGenerator = require('./targetSequenceGenerator.js');
 var targetPositionsGenerator = require('./targetPositionsGenerator.js');
+var validTrialSequenceGenerator = require('./validTrialSequenceGenerator.js');
+var queuedTargetSequenceGenerator = require('./queuedTargetSequenceGenerator.js');
 var fullTestSequenceGenerator = require('./fullTestSequenceGenerator.js');
 var listOfGoTrialsGenerator = require('./listOfGoTrialsGenerator.js');
 var fullTestResultsGenerator = require('./fullTestResultsGenerator.js');
@@ -31,8 +33,15 @@ var TestContainer = React.createClass({
 
    componentWillMount: function() {
       this.targetSequence = targetSequenceGenerator(constants.targetSets);
+
       this.targetPositions = targetPositionsGenerator(constants.targetSets, constants.seqPerMin);
-      this.fullTestSequence = fullTestSequenceGenerator(constants.targetSets, constants.seqPerMin, constants.seqLength, this.targetSequence, this.targetPositions, this.targetSequence);
+
+      this.validTrialSequence = validTrialSequenceGenerator(this.targetSequence);
+
+      this.queuedTargetSequence = queuedTargetSequenceGenerator(constants.targetSets, constants.seqPerMin, constants.seqLength, this.targetSequence);
+
+      this.fullTestSequence = fullTestSequenceGenerator(constants.targetSets, constants.seqPerMin, constants.seqLength, this.targetPositions, this.validTrialSequence, this.queuedTargetSequence);
+
       this.listOfGoTrials = listOfGoTrialsGenerator(constants.targetSets, constants.seqPerMin, this.targetPositions);
    },
 
