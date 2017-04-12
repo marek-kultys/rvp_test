@@ -1,9 +1,9 @@
 var numRange = 9
-var trials = 120;
-var seqPerMin = 6;
+var trials = 100;
+var seqPerMin = 5;
 var seqLength = 3;
 var targetSets = 3;
-var pace = (100 * 1000) / (trials); //change 1000 to 100 to speed up the test x10
+var pace = (100 * 100) / (trials); //change 1000 to 100 to speed up the test x10
 var delay = 0.1 * pace;
 var base = trials - targetSets * (seqPerMin * seqLength);
 
