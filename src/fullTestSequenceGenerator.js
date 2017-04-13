@@ -5,13 +5,7 @@ var fullTestSequence = [];
 function fullTestSequenceGenerator(numberOfTargets, numberOfTargetTrials, targetTrialLength, targetPositions, validTrialSequence, queuedTargetSequence) {
    var temp = [];
    var goTrials = [];
-	// temp = validTrialSequence.slice(); // What does this do?
-   // for (var n = 0; n < numberOfTargets; n++) {
-	// for (var x = 0; x < (numberOfTargets * numberOfTargetTrials); x++) {
-   //    var pos = targetPositions[x];
-	// 	temp.splice((pos), 0, queuedTargets[targetTrialLength * x], queuedTargets[targetTrialLength * x + 1], queuedTargets[targetTrialLength * x + 2]);
-	// }
-   // }
+
    for (var n = 0; n < (constants.trials - numberOfTargets * numberOfTargetTrials * (targetTrialLength - 1)); n++) {
       if (targetPositions.indexOf(n) === -1) {
          // console.log("Normal Trial");

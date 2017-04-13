@@ -15,7 +15,3 @@ function listOfGoTrialsGenerator(numberOfTargets, numberOfTargetTrials, targetPo
 
 
 module.exports = listOfGoTrialsGenerator;
-
-
-
-//       position += (q + 1) * (constants.seqLength - 1);
