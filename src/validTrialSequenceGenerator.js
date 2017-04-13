@@ -8,7 +8,7 @@ function validTrialSequenceGenerator(targetSequence) { // generate
       trialSequence = [];
       validTrialSequence = [];
       for (var x = 0; x < constants.base; x++) { // Populate trialSequence with 82 random 0-9 digits
-         var digit = Math.floor(Math.random() * constants.numRange + 1);
+         var digit = Math.floor(Math.random() * constants.numRange);
          trialSequence.push(digit);
          if ((trialSequence[x] === targetSequence[0][2]) && (trialSequence[x - 1] === targetSequence[0][1]) && (trialSequence[x - 2] === targetSequence[0][0])) { // ONLY WORKS FOR 3 DIGITS IN TARGET
             console.debug("TrialSequence was not valid for seq#1 and had to be cleared!");

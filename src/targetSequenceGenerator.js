@@ -12,7 +12,7 @@ function targetSequenceGenerator(numberOfGenerations) { // generator
          temp = [];
          count = {};
       	for (var x = 0; x < constants.seqLength; x++) {
-      		var digit = Math.floor(Math.random() * constants.numRange + 1); // generate random digits
+      		var digit = Math.floor(Math.random() * constants.numRange); // generate random digits
       		temp.push(digit);
       	}
 

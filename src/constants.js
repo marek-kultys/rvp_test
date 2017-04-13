@@ -1,4 +1,4 @@
-var numRange = 9
+var numRange = 10;
 var trials = 100;
 var seqPerMin = 5;
 var seqLength = 3;
