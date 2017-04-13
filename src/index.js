@@ -111,10 +111,7 @@ var TestContainer = React.createClass({
 
    render: function() {
       return (
-         <div className="container">
-            <div className="unit">
-               <p className="name underline"><a href="http://www.cambridgecognition.com/cantab/cognitive-tests/attention/rapid-visual-information-processing-rvp/">Rapid Visual Information Processing</a></p>
-            </div>
+         <div className="app">
             <Target targetSequence1={this.targetSequence[0].join(" — ")} targetSequence2={this.targetSequence[1].join(" — ")} targetSequence3={this.targetSequence[2].join(" — ")} />
             <Test onClick={this.toggleTest} testLaunched={this.state.testLaunched} testFinished={this.state.testFinished} fullTestSequence={this.fullTestSequence[this.state.position]} />
             <Result testFinished={this.state.testFinished} correctHits={correctHits} inCorrectHits={inCorrectHits} missedHits={missedHits} />

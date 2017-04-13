@@ -15,22 +15,30 @@
       <link rel="manifest" href="/manifest.json">
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
+      <link rel="stylesheet" href="/src/rvp.css">
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
    </head>
+
    <body>
-      <div id="root"></div>
-      <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      <main>
+         <div class="unit">
+            <p class="name title header"><a class="underline" href="http://www.cambridgecognition.com/cantab/cognitive-tests/attention/rapid-visual-information-processing-rvp/">Rapid Visual Information Processing</a> <!--<span><a class="info" href="#openModal1">?</a></span>--></p>
+         </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+         <!-- <div id="openModal1" class="modalDialog">
+            <div>
+               <h5 href="#close" title="Close" class="close">Close</h5>
+               <p class="rvp-modal-typo">Rapid Visual Information Processing assessment is a measure of sustained attention.</p>
+               <p class="rvp-modal-typo">Pay attention to the sequences displayed in </p>
+            </div>
+         </div> -->
 
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-      -->
+         <div id="root"></div>
+      <main>
    </body>
+
    <script type="text/javascript" src="scripts.js"></script>
 </html>
