@@ -164,6 +164,12 @@ button:active {
    color: #ea3856;
 }
 
+#root {
+   border-width: 2px;
+   border-color: red;
+   height: 200px;
+}
+
 
 /* MODAL */
 
